@@ -15,9 +15,18 @@ class ViewController: UIViewController {
     var temp4:String=""
     var temp5:Double=0
     var temp6:Double=0
+    var temp7:Double=0
     @IBOutlet weak var result: UITextField!
     @IBOutlet weak var history: UITextField!
     @IBOutlet weak var history2: UITextField!
+    @IBAction func point(_ sender: Any) {
+        if(result.text == "0")
+        {
+            result.text = ""
+        }
+        result.text = result.text! + "."
+    
+    }
     @IBAction func zero(_ sender: Any) {
         if(result.text == "0")
         {
@@ -90,6 +99,18 @@ class ViewController: UIViewController {
     }
     @IBAction func plus(_ sender: Any) {
         
+        if(operatorflug == 2)
+        {
+            result.text = "\(temp1)"
+        }
+        if(operatorflug == 3)
+        {
+            result.text = "\(temp1)"
+        }
+        if(operatorflug == 4)
+        {
+            result.text = "\(temp1)"
+        }
         if(operatorflug == 1)
         {
             if(result.text == "")
@@ -104,9 +125,24 @@ class ViewController: UIViewController {
         temp1 = Double(result.text!)!
         result.text = ""
         }
+        
         operatorflug = 1
     }
     @IBAction func subtract(_ sender: Any) {
+        
+        if(operatorflug == 1)
+        {
+        
+            result.text = "\(temp1)"
+        }
+        if(operatorflug == 3)
+        {
+            result.text = "\(temp1)"
+        }
+        if(operatorflug == 4)
+        {
+            result.text = "\(temp1)"
+        }
         if(operatorflug == 2)
         {
             if(result.text == "")
@@ -122,8 +158,21 @@ class ViewController: UIViewController {
         result.text = ""
         operatorflug = 2
         }
+        
     }
     @IBAction func multiply(_ sender: Any) {
+        if(operatorflug == 1)
+        {
+            result.text = "\(temp1)"
+        }
+        if(operatorflug == 2)
+        {
+            result.text = "\(temp1)"
+        }
+        if(operatorflug == 4)
+        {
+            result.text = "\(temp1)"
+        }
         if(operatorflug == 3)
         {
             if(result.text == "")
@@ -141,6 +190,18 @@ class ViewController: UIViewController {
         }
     }
     @IBAction func divide(_ sender: Any) {
+        if(operatorflug == 1)
+        {
+            result.text = "\(temp1)"
+        }
+        if(operatorflug == 2)
+        {
+            result.text = "\(temp1)"
+        }
+        if(operatorflug == 3)
+        {
+            result.text = "\(temp1)"
+        }
         if(operatorflug == 4)
         {
             if(result.text == "")
