@@ -16,15 +16,26 @@ class ViewController: UIViewController {
     var temp5:Double=0
     var temp6:Double=0
     var temp7:Double=0
+    var temp8:Double=0
+    var temp9:Int=0
     @IBOutlet weak var result: UITextField!
     @IBOutlet weak var history: UITextField!
     @IBOutlet weak var history2: UITextField!
     @IBAction func point(_ sender: Any) {
+        temp9 = result.text!.count
+        
+        if(temp8 == 1)
+        {
+            temp8 = 1
+        }
+        else{
         if(result.text == "0")
         {
             result.text = ""
         }
         result.text = result.text! + "."
+        temp8 = 1
+        }
     
     }
     @IBAction func zero(_ sender: Any) {
@@ -125,14 +136,13 @@ class ViewController: UIViewController {
         temp1 = Double(result.text!)!
         result.text = ""
         }
-        
+        temp8 = 0
         operatorflug = 1
     }
     @IBAction func subtract(_ sender: Any) {
         
         if(operatorflug == 1)
         {
-        
             result.text = "\(temp1)"
         }
         if(operatorflug == 3)
@@ -158,7 +168,7 @@ class ViewController: UIViewController {
         result.text = ""
         operatorflug = 2
         }
-        
+        temp8 = 0
     }
     @IBAction func multiply(_ sender: Any) {
         if(operatorflug == 1)
@@ -188,6 +198,7 @@ class ViewController: UIViewController {
         result.text = ""
         operatorflug = 3
         }
+        temp8 = 0
     }
     @IBAction func divide(_ sender: Any) {
         if(operatorflug == 1)
@@ -217,6 +228,7 @@ class ViewController: UIViewController {
         result.text = ""
         operatorflug = 4
         }
+        temp8 = 0
     }
     @IBAction func equal(_ sender: Any) {
         if(operatorflug == 1)
@@ -247,6 +259,7 @@ class ViewController: UIViewController {
         }
         temp3 = result.text!
         operatorflug = 0
+        temp8 = 0
     }
     @IBAction func Delete(_ sender: Any) {
         if(result.text != "")
@@ -265,6 +278,7 @@ class ViewController: UIViewController {
             
         }
         operatorflug = 0
+        temp8 = 0
     }
     @IBAction func none(_ sender: Any) {
         if(result.text == "0")
@@ -281,7 +295,7 @@ class ViewController: UIViewController {
         }
         }
        operatorflug = 0
-        
+       temp8 = 0
     }
     @IBAction func against(_ sender: Any) {
         temp5 = 0 - Double(result.text!)!
