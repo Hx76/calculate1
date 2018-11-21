@@ -20,7 +20,6 @@ class ViewController: UIViewController {
     var temp9:Int=0
     @IBOutlet weak var result: UITextField!
     @IBOutlet weak var history: UITextField!
-    @IBOutlet weak var history2: UITextField!
     @IBAction func point(_ sender: Any) {
         temp9 = result.text!.count
         
@@ -233,27 +232,27 @@ class ViewController: UIViewController {
     @IBAction func equal(_ sender: Any) {
         if(operatorflug == 1)
         {
-            history2.text =  "\(temp1)" + "➕" + result.text!
+           // history2.text =  "\(temp1)" + "➕" + result.text!
             temp1 = temp1 + Double(result.text!)!
             result.text = "\(temp1)"
             
         }
         if(operatorflug == 2)
         {
-            history2.text =  "\(temp1)" + "➖" + result.text!
+           // history2.text =  "\(temp1)" + "➖" + result.text!
             temp1 = temp1 - Double(result.text!)!
             result.text = "\(temp1)"
             
         }
         if(operatorflug == 3)
         {
-            history2.text =  "\(temp1)" + "✖️" + result.text!
+           // history2.text =  "\(temp1)" + "✖️" + result.text!
             temp1 = temp1 * Double(result.text!)!
             result.text = "\(temp1)"
         }
         if(operatorflug == 4)
         {
-            history2.text =  "\(temp1)" + "➗" + result.text!
+           // history2.text =  "\(temp1)" + "➗" + result.text!
             temp1 = temp1 / Double(result.text!)!
             result.text = "\(temp1)"
         }
@@ -275,7 +274,6 @@ class ViewController: UIViewController {
         if(result.text == "")
         {
             result.text = "0"
-            
         }
         operatorflug = 0
         temp8 = 0
@@ -284,7 +282,7 @@ class ViewController: UIViewController {
         if(result.text == "0")
         {
             history.text="0"
-            history2.text="0"
+        //    history2.text="0"
         }
         else{
         result.text=""
