@@ -50,6 +50,7 @@ class ViewController: UIViewController {
             result.text = ""
         }
         result.text = result.text! + "1"
+        
     }
     @IBAction func two(_ sender: Any) {
         if(result.text == "0")
@@ -142,6 +143,14 @@ class ViewController: UIViewController {
         
         if(operatorflug == 1)
         {
+            if(result.text != "")
+            {
+              temp1 = temp1 + Double(result.text!)!
+            }
+            else
+            {
+                temp1 = temp1 + 0
+            }
             result.text = "\(temp1)"
         }
         if(operatorflug == 3)
@@ -309,7 +318,5 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
-
-
 }
 
