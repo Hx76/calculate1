@@ -112,14 +112,38 @@ class ViewController: UIViewController {
         
         if(operatorflug == 2)
         {
+            if(result.text != "")
+            {
+                temp1 = temp1 - Double(result.text!)!
+            }
+            else
+            {
+                temp1 = temp1 + 0
+            }
             result.text = "\(temp1)"
         }
         if(operatorflug == 3)
         {
+            if(result.text != "")
+            {
+                temp1 = temp1 * Double(result.text!)!
+            }
+            else
+            {
+                temp1 = temp1 + 0
+            }
             result.text = "\(temp1)"
         }
         if(operatorflug == 4)
         {
+            if(result.text != "")
+            {
+                temp1 = temp1 / Double(result.text!)!
+            }
+            else
+            {
+                temp1 = temp1 + 0
+            }
             result.text = "\(temp1)"
         }
         if(operatorflug == 1)
@@ -155,10 +179,26 @@ class ViewController: UIViewController {
         }
         if(operatorflug == 3)
         {
+            if(result.text != "")
+            {
+                temp1 = temp1 * Double(result.text!)!
+            }
+            else
+            {
+                temp1 = temp1 + 0
+            }
             result.text = "\(temp1)"
         }
         if(operatorflug == 4)
         {
+            if(result.text != "")
+            {
+                temp1 = temp1 / Double(result.text!)!
+            }
+            else
+            {
+                temp1 = temp1 + 0
+            }
             result.text = "\(temp1)"
         }
         if(operatorflug == 2)
@@ -181,14 +221,38 @@ class ViewController: UIViewController {
     @IBAction func multiply(_ sender: Any) {
         if(operatorflug == 1)
         {
+            if(result.text != "")
+            {
+                temp1 = temp1 + Double(result.text!)!
+            }
+            else
+            {
+                temp1 = temp1 + 0
+            }
             result.text = "\(temp1)"
         }
         if(operatorflug == 2)
         {
+            if(result.text != "")
+            {
+                temp1 = temp1 - Double(result.text!)!
+            }
+            else
+            {
+                temp1 = temp1 + 0
+            }
             result.text = "\(temp1)"
         }
         if(operatorflug == 4)
         {
+            if(result.text != "")
+            {
+                temp1 = temp1 / Double(result.text!)!
+            }
+            else
+            {
+                temp1 = temp1 + 0
+            }
             result.text = "\(temp1)"
         }
         if(operatorflug == 3)
@@ -211,14 +275,38 @@ class ViewController: UIViewController {
     @IBAction func divide(_ sender: Any) {
         if(operatorflug == 1)
         {
+            if(result.text != "")
+            {
+                temp1 = temp1 + Double(result.text!)!
+            }
+            else
+            {
+                temp1 = temp1 + 0
+            }
             result.text = "\(temp1)"
         }
         if(operatorflug == 2)
         {
+            if(result.text != "")
+            {
+                temp1 = temp1 - Double(result.text!)!
+            }
+            else
+            {
+                temp1 = temp1 + 0
+            }
             result.text = "\(temp1)"
         }
         if(operatorflug == 3)
         {
+            if(result.text != "")
+            {
+                temp1 = temp1 * Double(result.text!)!
+            }
+            else
+            {
+                temp1 = temp1 + 0
+            }
             result.text = "\(temp1)"
         }
         if(operatorflug == 4)
